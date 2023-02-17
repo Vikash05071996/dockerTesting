@@ -19,3 +19,5 @@ jobs:
 
       - name: Build the Docker image
         run: docker build --file Dockerfile --tag ${{ secrets.USER_NAME }}/reponod
+      - name: Docker Push
+        run: docker push ${{ secrets.USER_NAME }}/reponode
